@@ -1,8 +1,8 @@
-# Auravant Project Template
+# Auravant Extensions Template
 
 ## Descripción
 
-Este repositorio proporciona un template para iniciar proyectos en Auravant de manera más rápida y eficiente. El template incluye una configuración inicial con las siguientes tecnologías y herramientas:
+Este repo te hace la vida más fácil, crea un template para iniciar proyectos de extensiones en Auravant mucho más rápido y eficiente. El template viene con una config inicial con el siguiente stack:
 
 - **React**: Biblioteca para construir interfaces de usuario.
 - **Vite.js**: Herramienta de construcción rápida y moderna.
@@ -13,7 +13,7 @@ Este repositorio proporciona un template para iniciar proyectos en Auravant de m
 
 ## Uso
 
-Para crear un nuevo proyecto basado en este template, utiliza el siguiente comando:
+Para crear un nuevo proyecto basado en este template, usá el siguiente comando papá:
 
 ```bash
 npx avt-ext ${nombre_del_repo}
