@@ -2,6 +2,7 @@
   "name": "avt-ext",
   "version": "1.0.0",
   "type": "module",
+  "bin": "./bin/cli.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
