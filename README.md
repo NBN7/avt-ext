@@ -23,9 +23,9 @@ npx avt-ext nombre_del_repo
 
 Para disfrutar al máximo de este template te recomiendo instalar las siguientes extensiones en VSCode:
 
-Prettier - Code formatter: Para formatear el código automáticamente.
-ESLint: Para identificar y reportar problemas en el código JavaScript y TypeScript.
-Prettier ESLint: Para integrar Prettier y ESLint, asegurando una experiencia de formateo consistente.
-Tailwind CSS IntelliSense: Para obtener autocompletado y documentación en tiempo real para clases de Tailwind CSS.
+- **Prettier**: Code formatter: Para formatear el código automáticamente.
+- **ESLint**: Para identificar y reportar problemas en el código JavaScript y TypeScript.
+- **Prettier ESLint**: Para integrar Prettier y ESLint, asegurando una experiencia de formateo consistente.
+- **Tailwind CSS IntelliSense**: Para obtener autocompletado y documentación en tiempo real para clases de Tailwind CSS.
 
 _Hecho con ❤️ por Nacho._
