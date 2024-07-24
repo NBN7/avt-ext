@@ -16,7 +16,7 @@ Este repo te hace la vida más fácil, crea un template para iniciar proyectos d
 Para crear un nuevo proyecto basado en este template, usá el siguiente comando papá:
 
 ```bash
-npx avt-ext ${nombre_del_repo}
+npx avt-ext nombre_del_repo
 ```
 
 ## Extensiones Recomendadas para VSCode
