@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# Auravant Project Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este repositorio proporciona un template para iniciar proyectos en Auravant de manera más rápida y eficiente. El template incluye una configuración inicial con las siguientes tecnologías y herramientas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca para construir interfaces de usuario.
+- **Vite.js**: Herramienta de construcción rápida y moderna.
+- **TypeScript**: Superset de JavaScript que añade tipos estáticos.
+- **TailwindCSS**: Framework de utilidades para estilos CSS.
+- **Prettier**: Formateador de código.
+- **ESLint**: Herramienta para identificar y reportar problemas en el código JavaScript y TypeScript.
 
-## Expanding the ESLint configuration
+## Uso
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Para crear un nuevo proyecto basado en este template, utiliza el siguiente comando:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```bash
+npx avt-ext ${nombre_del_repo}
