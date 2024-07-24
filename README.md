@@ -17,3 +17,6 @@ Para crear un nuevo proyecto basado en este template, usá el siguiente comando 
 
 ```bash
 npx avt-ext ${nombre_del_repo}
+```
+
+Así de fácil :)
