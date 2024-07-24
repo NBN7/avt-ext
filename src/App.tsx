@@ -1,8 +1,8 @@
-import { TechSection } from "./components/TechSection";
-import AuravantLogo from "./assets/avt-logo.svg";
+import { TechSection } from './components/TechSection';
+import AuravantLogo from './assets/avt-logo.svg';
 
 function App() {
-  console.log("You should remove this!");
+  console.log('You should remove this!');
 
   return (
     <main className="w-full h-screen flex flex-col justify-center items-center">
