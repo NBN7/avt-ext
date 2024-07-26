@@ -20,10 +20,12 @@ module.exports = {
       colors: {
         primary: '#0D72B9',
         success: '#2BAD5C',
-        warning: '#D8AA07',
-        link: '#007BB2',
-        disabled: '#8D8D8D',
+        warning: '#FEB41F',
+        error: '#FC2F02',
+        disabled: '#828282',
+        premium: '#D8AA07',
       },
+      boxShadow: { 'full-custom': '0 0px 12px rgba(0, 0, 0, 0.3)' },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },

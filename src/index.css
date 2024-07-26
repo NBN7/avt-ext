@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans Variable', sans-serif;
     @apply text-white bg-black font-normal;
   }
 }

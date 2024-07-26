@@ -10,18 +10,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-primary text-zinc-50',
-        destructive: 'bg-red-500 text-zinc-50',
+        destructive: 'bg-error text-zinc-50',
         outline: 'border border-primary text-primary',
         secondary: 'bg-zinc-100 text-zinc-900',
         ghost: 'hover:bg-primary/40',
         success: 'bg-success text-zinc-50',
         warning: 'bg-warning text-zinc-50',
-        link: 'text-link underline-offset-4 hover:underline hover:scale-100',
+        link: 'text-primary underline-offset-4 hover:underline hover:scale-100',
       },
       size: {
-        default: 'h-10 px-4 py-2',
+        default: 'h-10 p-4',
         sm: 'h-9 rounded-lg px-3',
-        lg: 'h-11 rounded-lg px-8',
+        lg: 'h-11 rounded-lg px-8 py-4',
         icon: 'h-10 w-10',
       },
     },
