@@ -9,6 +9,10 @@
     }
   ],
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "types": ["./node_modules/@auravant/sdk-types"]
   }
 }

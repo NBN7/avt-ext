@@ -1,5 +1,5 @@
-import { TechSection } from './components/TechSection';
-import AuravantLogo from './assets/avt-logo.svg';
+import { TechSection } from '@/components/TechSection';
+import AuravantLogo from '@/assets/avt-logo.svg';
 
 function App() {
   console.log('You should remove this!');
