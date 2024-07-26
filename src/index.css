@@ -5,6 +5,6 @@
 @layer base {
   :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    @apply text-white bg-zinc-900 font-normal;
+    @apply text-white bg-black font-normal;
   }
 }

@@ -1,4 +1,5 @@
 import { TechSection } from '@/components/TechSection';
+import { Button } from '@/components/ui/button';
 import AuravantLogo from '@/assets/avt-logo.svg';
 
 function App() {
