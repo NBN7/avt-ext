@@ -1,5 +1,4 @@
 import { TechSection } from '@/components/TechSection';
-import { Button } from '@/components/ui/button';
 import AuravantLogo from '@/assets/avt-logo.svg';
 
 function App() {
@@ -7,7 +6,7 @@ function App() {
 
   return (
     <main className="w-full h-screen flex flex-col justify-center items-center">
-      <img className="size-[300px]" src={AuravantLogo} alt="Auravant Logo" />
+      <img className="size-80" src={AuravantLogo} alt="Auravant Logo" />
 
       <TechSection />
     </main>

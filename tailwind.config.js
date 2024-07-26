@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         primary: '#0D72B9',
         success: '#2BAD5C',
+        warning: '#D8AA07',
         link: '#007BB2',
         disabled: '#8D8D8D',
       },
