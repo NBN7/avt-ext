@@ -1,0 +1,88 @@
+# ENVIRONMENT VARIABLES YOU NEED IN GITLAB TO MAKE THIS WORK
+# APP_ID
+# AVT_PASS
+# AVT_USERNAME
+
+image: node:lts
+
+stages:
+  - build
+  - deploy
+
+build_test:
+  stage: build
+  image: node:lts
+  before_script:
+    - echo "Start building extension"
+  script:
+    - apt-get update && apt-get install zip -y
+    - npm install
+    - npm run build
+    - cd dist
+    - zip -r dist.zip *
+    - echo "Extension built successfully!"
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - dist
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "develop"  && $CI_PIPELINE_SOURCE != "merge_request_event"
+
+build_prod:
+  stage: build
+  image: node:lts
+  before_script:
+    - echo "Start building extension"
+  script:
+    - apt-get update && apt-get install zip -y
+    - npm install
+    - npm run build
+    - cd dist
+    - zip -r dist.zip *
+    - echo "Extension built successfully!"
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - dist
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "merge_request_event"
+
+deploy_test: ###### DEVELOPMENT/TEST ENVIRONMENT
+  stage: deploy
+  image: alpine
+  before_script:
+    - echo "Deploying extension"
+  script:
+    - echo 'nameserver 8.8.8.8' > /etc/resolv.conf
+    - apk add bash dhclient curl jq
+    - "TOKEN=$(curl -s -X POST -H 'Accept: application/json' --data-raw 'username='$AVT_USERNAME'&password='$AVT_PASS'&forcePersonal=true' https://api.auravant.com/api/auth | jq -r '.token')"
+    - if [ $TOKEN == "null" ]; then exit 1; fi
+    - "RESULT=$(curl -X POST https://api.auravant.com/api/auradevs/commit -H 'Accept: application/json' -H 'Authorization: Bearer '$TOKEN -F 'file=@dist/dist.zip' -F 'client_id='$APP_ID -F 'msg=git-'$CI_COMMIT_SHORT_SHA)"
+    - CODE=$(echo "$RESULT" | jq -r '.code')
+    - if [ $CODE != "0" ]; then echo "$RESULT"; exit 1; fi
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "develop" && $CI_PIPELINE_SOURCE != "merge_request_event"
+
+
+deploy_PROD: ####### PRODUCTION ENVIRONMENT
+  stage: deploy
+  image: alpine
+  before_script:
+    - echo "Deploying extension"
+  script:
+    - echo 'nameserver 8.8.8.8' > /etc/resolv.conf
+    - apk add bash dhclient curl jq
+    - "TOKEN=$(curl -s -X POST -H 'Accept: application/json' --data-raw 'username='$AVT_USERNAME'&password='$AVT_PASS'&forcePersonal=true' https://api.auravant.com/api/auth | jq -r '.token')"
+    - if [ $TOKEN == "null" ]; then exit 1; fi
+    - "RESULT=$(curl -X POST https://api.auravant.com/api/auradevs/commit -H 'Accept: application/json' -H 'Authorization: Bearer '$TOKEN -F 'file=@dist/dist.zip' -F 'client_id='$APP_ID -F 'msg=git-'$CI_COMMIT_SHORT_SHA)"
+    - CODE=$(echo "$RESULT" | jq -r '.code')
+    - if [ $CODE != "0" ]; then echo "$RESULT"; exit 1; fi
+    - "RESULT=$(curl -X GET -H 'Accept: application/json' -H 'Authorization: Bearer '$TOKEN https://api.auravant.com/api/auradevs/apps?client_id=$APP_ID | jq)"
+    - VERSION=$(echo "$RESULT" | jq  -r ' .apps[].versions | keys | max')
+    - echo "$VERSION"
+    - "RESULT=$(curl https://api.auravant.com/api/auradevs/ver/publish -X PATCH -H 'Accept: application/json' -H 'Content-Type: application/json' -H 'Authorization: Bearer '$TOKEN -d '{\"version\":\"'$VERSION'\",\"client_id\":\"'$APP_ID'\"}')"
+    - echo "$RESULT"
+    - CODE=$(echo "$RESULT" | jq -r '.code')
+    - if [ $CODE != "0" ]; then echo "$RESULT"; exit 1; fi
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && $CI_PIPELINE_SOURCE != "merge_request_event"
