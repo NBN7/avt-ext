@@ -25,11 +25,19 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Timeline } from '@/components/ui/timeline';
 import { TIMELINE_ITEMS } from '@/constants/timelineItems';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { Search } from 'lucide-react';
 
 export const ComponentsSection = () => {
   return (
-    <div className=" w-full h-screen flex flex-col gap-6 bg-white text-black rounded-lg mt-8 p-4">
+    <div className="mt-8 flex h-screen w-full flex-col gap-6 rounded-lg bg-white p-4 text-black">
       <Input
         id="input-example"
         className="md:w-1/3"
@@ -54,7 +62,7 @@ export const ComponentsSection = () => {
         </SelectContent>
       </Select>
 
-      <div className="w-full flex items-center gap-12">
+      <div className="flex w-full items-center gap-12">
         <p>Example option</p>
         <Switch id="switch-example" />
       </div>
@@ -93,6 +101,19 @@ export const ComponentsSection = () => {
       </div>
 
       <Timeline items={TIMELINE_ITEMS} />
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <p>Card Content</p>
+        </CardContent>
+        <CardFooter>
+          <p>Card Footer</p>
+        </CardFooter>
+      </Card>
     </div>
   );
 };

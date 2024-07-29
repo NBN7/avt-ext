@@ -5,7 +5,7 @@ import { Label } from './label';
 // modified by dev
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string; 
+  label?: string;
   icon?: React.ElementType;
 }
 
@@ -17,7 +17,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         {label && <Label htmlFor={props.id}>{label}</Label>}
         <div
           className={cn(
-            `relative flex items-center h-10 rounded-lg bg-white shadow-full-custom ${Icon ? 'pr-10' : ''} text-sm`,
+            `relative flex h-10 items-center rounded-lg bg-white shadow-full-custom ${Icon ? 'pr-10' : ''} text-sm`,
             className
           )}
         >
@@ -26,7 +26,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
             type={type}
             ref={ref}
             className={cn(
-              'flex h-10 w-full text-black rounded-lg px-3 py-2 text-sm ring-offset-white placeholder:text-zinc-500 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
+              'flex h-10 w-full rounded-lg px-3 py-2 text-sm text-black ring-offset-white placeholder:text-zinc-500 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50',
               Icon ? 'pr-10' : 'pr-3'
             )}
           />
