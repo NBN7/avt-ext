@@ -6,7 +6,7 @@ function App() {
   console.log('You should remove this!');
 
   return (
-    <main className="w-full h-screen flex flex-col justify-center items-center">
+    <main className="flex h-screen w-full flex-col items-center justify-center">
       <img className="size-80" src={AuravantLogo} alt="Auravant Logo" />
 
       <TechSection />

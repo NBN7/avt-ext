@@ -25,13 +25,13 @@ const Timeline: React.FC<TimelineProps> = ({
         <li key={index} className="mb-10 ms-4">
           <div
             className={twMerge(
-              'absolute size-3 bg-primary rounded-full mt-2 -start-1.5 border border-white',
+              'absolute -start-1.5 mt-2 size-3 rounded-full border border-white bg-primary',
               circleClassName
             )}
           ></div>
           <h3
             className={twMerge(
-              'text-lg font-semibold text-pretty',
+              'text-pretty text-lg font-semibold',
               titleClassName
             )}
           >

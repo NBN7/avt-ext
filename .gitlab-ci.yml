@@ -63,7 +63,6 @@ deploy_test: ###### DEVELOPMENT/TEST ENVIRONMENT
   rules:
     - if: $CI_COMMIT_REF_NAME == "develop" && $CI_PIPELINE_SOURCE != "merge_request_event"
 
-
 deploy_PROD: ####### PRODUCTION ENVIRONMENT
   stage: deploy
   image: alpine
@@ -80,7 +79,7 @@ deploy_PROD: ####### PRODUCTION ENVIRONMENT
     - "RESULT=$(curl -X GET -H 'Accept: application/json' -H 'Authorization: Bearer '$TOKEN https://api.auravant.com/api/auradevs/apps?client_id=$APP_ID | jq)"
     - VERSION=$(echo "$RESULT" | jq  -r ' .apps[].versions | keys | max')
     - echo "$VERSION"
-    - "RESULT=$(curl https://api.auravant.com/api/auradevs/ver/publish -X PATCH -H 'Accept: application/json' -H 'Content-Type: application/json' -H 'Authorization: Bearer '$TOKEN -d '{\"version\":\"'$VERSION'\",\"client_id\":\"'$APP_ID'\"}')"
+    - 'RESULT=$(curl https://api.auravant.com/api/auradevs/ver/publish -X PATCH -H ''Accept: application/json'' -H ''Content-Type: application/json'' -H ''Authorization: Bearer ''$TOKEN -d ''{"version":"''$VERSION''","client_id":"''$APP_ID''"}'')'
     - echo "$RESULT"
     - CODE=$(echo "$RESULT" | jq -r '.code')
     - if [ $CODE != "0" ]; then echo "$RESULT"; exit 1; fi
