@@ -19,6 +19,10 @@ Para crear un nuevo proyecto basado en este template, usá el siguiente comando 
 npx avt-ext nombre_del_repo
 ```
 
+## Componentes
+
+Los componentes estan basados en [shadcn](https://ui.shadcn.com/), por lo que toda la documentacion de cada uno de los componentes está en su página web.
+
 ## Extensiones Recomendadas para VSCode
 
 Para disfrutar al máximo de este template te recomiendo instalar las siguientes extensiones en VSCode:
