@@ -1,3 +1,5 @@
+// remove this file when you start working on the project
+
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
@@ -24,7 +26,6 @@ import {
 } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
 import { Timeline } from '@/components/ui/timeline';
-import { TIMELINE_ITEMS } from '@/constants/timelineItems';
 import {
   Card,
   CardContent,
@@ -33,17 +34,46 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { Search } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea';
+import { Separator } from '@/components/ui/separator';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import { TimelineItem } from '@/types';
+
+const TIMELINE_ITEMS: TimelineItem[] = [
+  {
+    title: 'First item',
+    description: 'This is the first item of the timeline',
+  },
+  {
+    title: 'Second item',
+    description: 'This is the second item of the timeline',
+  },
+  {
+    title: 'Third item',
+    description: 'This is the third item of the timeline',
+  },
+];
 
 export const ComponentsSection = () => {
   return (
-    <div className="mt-8 flex h-screen w-full flex-col gap-6 rounded-lg bg-white p-4 text-black">
+    <div className="mt-8 flex min-h-screen w-full flex-col gap-6 rounded-lg bg-white p-4 text-black">
       <Input
         id="input-example"
         className="md:w-1/3"
         label="Label example"
         placeholder="Placeholder example"
-        icon={Search}
+      />
+
+      <Textarea
+        id="textarea-example"
+        className="md:w-1/3"
+        label="Label example"
+        placeholder="Placeholder example"
       />
 
       <Select>
@@ -95,14 +125,17 @@ export const ComponentsSection = () => {
         </DialogContent>
       </Dialog>
 
+      <Separator />
+
       <div className="flex gap-2">
         <Badge variant="success">Success</Badge>
         <Badge variant="destructive">Error</Badge>
+        <Badge variant="warning">Warning</Badge>
       </div>
 
       <Timeline items={TIMELINE_ITEMS} />
 
-      <Card>
+      <Card className="sm:w-[350px]">
         <CardHeader>
           <CardTitle>Card Title</CardTitle>
           <CardDescription>Card Description</CardDescription>
@@ -114,6 +147,17 @@ export const ComponentsSection = () => {
           <p>Card Footer</p>
         </CardFooter>
       </Card>
+
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button className="md:w-40">Hover</Button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>Tooltip Example</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
     </div>
   );
 };
