@@ -1,5 +1,5 @@
 import { Input } from '@/components/ui/input';
-import { Label } from './ui/label';
+import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import {
@@ -22,9 +22,10 @@ import {
   DialogFooter,
   DialogClose,
 } from '@/components/ui/dialog';
-import { Search } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { Timeline } from './ui/timeline';
+import { Timeline } from '@/components/ui/timeline';
+import { TIMELINE_ITEMS } from '@/constants/timelineItems';
+import { Search } from 'lucide-react';
 
 export const ComponentsSection = () => {
   return (
@@ -91,7 +92,7 @@ export const ComponentsSection = () => {
         <Badge variant="destructive">Error</Badge>
       </div>
 
-      <Timeline items={['First item', 'Second item', 'Third item']} />
+      <Timeline items={TIMELINE_ITEMS} />
     </div>
   );
 };

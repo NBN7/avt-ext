@@ -1,30 +1,47 @@
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { TimelineItem } from '@/types';
 
-export interface TimelineProps {
-  items: string[];
+interface TimelineProps {
+  items: TimelineItem[];
   circleClassName?: string;
   lineClassName?: string;
+  titleClassName?: string;
+  descriptionClassName?: string;
 }
 
 const Timeline: React.FC<TimelineProps> = ({
   items,
   circleClassName,
   lineClassName,
+  titleClassName,
+  descriptionClassName,
 }) => {
   return (
     <ol
-      className={twMerge('relative border-l border-primary/30', lineClassName)}
+      className={twMerge('relative border-s border-primary/30', lineClassName)}
     >
       {items.map((item, index) => (
-        <li key={index} className="mb-10 ml-4">
+        <li key={index} className="mb-10 ms-4">
           <div
             className={twMerge(
-              'absolute size-2 bg-primary rounded-full mt-2.5 -left-1 border border-white',
+              'absolute size-3 bg-primary rounded-full mt-2 -start-1.5 border border-white',
               circleClassName
             )}
           ></div>
-          <h3 className="text-lg font-semibold text-pretty">{item}</h3>
+          <h3
+            className={twMerge(
+              'text-lg font-semibold text-pretty',
+              titleClassName
+            )}
+          >
+            {item.title}
+          </h3>
+          {item.description && (
+            <p className={twMerge('text-gray-500', descriptionClassName)}>
+              {item.description}
+            </p>
+          )}
         </li>
       ))}
     </ol>
