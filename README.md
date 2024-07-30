@@ -32,4 +32,11 @@ Para disfrutar al máximo de este template te recomiendo instalar las siguientes
 - **Prettier ESLint**: Para integrar Prettier y ESLint, asegurando una experiencia de formateo consistente.
 - **Tailwind CSS IntelliSense**: Para obtener autocompletado y documentación en tiempo real para clases de Tailwind CSS.
 
+## Comandos Personalizados
+
+Estos comandos estan hechos para facilitar el proceso del desarrollo en las extensiones de Auravant:
+
+- **npm run build:zip**: Este comando ejecuta el comando build y zippea los archivos que están dentro de la carpeta dist con todos los archivos necesarios para el deploy. Este archivo dist.zip es el que vas a necesitar para agregar tu extensión a la plataforma.
+- **npm run format**: Este comando utiliza Prettier para formattear todo el código del proyecto. Al ejecutarlo revisa todos los archivos y aplica el formato especificado en la config. Esto ayuda a mantener el código limpio para todos.
+
 _Hecho con ❤️ por Nacho._
