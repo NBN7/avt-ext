@@ -1,5 +1,6 @@
 import fs from 'fs';
 import archiver from 'archiver';
+import chalk from 'chalk';
 
 const output = fs.createWriteStream('dist.zip');
 const archive = archiver('zip', {
@@ -7,7 +8,11 @@ const archive = archiver('zip', {
 });
 
 output.on('close', () => {
-  console.log(`Auravant Extension .zip file created successfully: ${archive.pointer()} bytes`);
+  console.log(
+    chalk.blue(
+      `Auravant Extension .zip file created successfully: ${archive.pointer()} bytes`
+    )
+  );
 });
 
 archive.on('error', (err) => {
