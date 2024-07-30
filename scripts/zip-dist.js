@@ -10,7 +10,7 @@ const archive = archiver('zip', {
 output.on('close', () => {
   console.log(
     chalk.blue(
-      `Auravant Extension .zip file created successfully: ${archive.pointer()} bytes`
+      `Auravant Extension .zip file created successfully: ${archive.pointer()} bytes\n`
     )
   );
 });
