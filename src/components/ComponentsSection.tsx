@@ -65,7 +65,6 @@ export const ComponentsSection = () => {
       <Input
         id="input-example"
         className="md:w-1/3"
-        label="Label example"
         placeholder="Placeholder example"
       />
 
