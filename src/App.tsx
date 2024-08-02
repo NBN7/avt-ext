@@ -6,8 +6,6 @@ import TailwindLogo from '@/assets/tailwind.svg';
 const logoStyle = 'size-10 hover:scale-110 transition-all cursor-pointer';
 
 function App() {
-  console.log('You should remove this!');
-
   return (
     <main className="flex min-h-screen w-full items-center justify-center gap-4">
       <img className="size-80" src={AuravantLogo} alt="Auravant Logo" />
