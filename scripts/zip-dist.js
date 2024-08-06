@@ -1,6 +1,6 @@
-import fs from 'fs';
 import archiver from 'archiver';
 import chalk from 'chalk';
+import fs from 'fs';
 
 const output = fs.createWriteStream('dist.zip');
 const archive = archiver('zip', {

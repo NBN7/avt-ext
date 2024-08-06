@@ -9,11 +9,11 @@ import * as Sentry from '@sentry/react';
 //   useNavigationType,
 // } from "react-router-dom";
 
+import '@fontsource-variable/open-sans';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import '@fontsource-variable/open-sans';
 
 Sentry.init({
   dsn: '',
