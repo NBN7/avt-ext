@@ -16,7 +16,7 @@ Este repo te hace la vida más fácil, te crea un template para iniciar proyecto
 Para crear un nuevo proyecto basado en este template, usá el siguiente comando papá:
 
 ```bash
-npx avt-ext nombre_del_repo
+npx avt-ext@latest nombre_del_repo
 ```
 
 ## Componentes
