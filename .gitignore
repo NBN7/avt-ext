@@ -25,4 +25,4 @@ dist-ssr
 *.npmrc
 
 # Bin directory
-# bin
+bin
