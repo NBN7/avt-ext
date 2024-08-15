@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este repo te hace la vida más fácil, te crea un template para iniciar proyectos de extensiones en Auravant mucho más rápido y eficiente. El template viene con una config inicial con el siguiente stack:
+Este comando te hace la vida más fácil, te crea un template para iniciar proyectos de extensiones en Auravant mucho más rápido y eficiente. El template viene con una config inicial con el siguiente stack:
 
 - **React**: Biblioteca para construir interfaces de usuario.
 - **Vite.js**: Herramienta de construcción rápida y moderna.
@@ -10,6 +10,8 @@ Este repo te hace la vida más fácil, te crea un template para iniciar proyecto
 - **TailwindCSS**: Framework de utilidades para estilos CSS.
 - **Prettier**: Formateador de código.
 - **ESLint**: Herramienta para identificar y reportar problemas en el código JavaScript y TypeScript.
+
+Ademas, agrega el paquete **SDK Types** para que tengas autocompletado a la hora de interactuar con nuestro SDK. Para utilizarlo vas a tener que crear un archivo .npmrc basado en el archivo ya existente (.npmrc.example) y agregar un token de GitLab válido.
 
 ## Uso
 
@@ -41,6 +43,6 @@ Estos comandos estan hechos para facilitar el proceso del desarrollo en las exte
 
 ## Sentry y react-router-dom
 
-Actualmente Sentry se inicializa en src\main.tsx. Si tu proyecto ya utiliza / va a utilizar react-router-dom se necesita habilitar los comentarios de este archivo. No te olvides que las extensiones son un iframe, por lo que vas a necesitar utilizar [HashRouter](https://reactrouter.com/en/main/router-components/hash-router) en vez de [BrowserRouter](https://reactrouter.com/en/main/router-components/browser-router).
+Actualmente Sentry se inicializa en src\main.tsx. Si tu proyecto ya utiliza / va a utilizar react-router-dom, se necesita habilitar los comentarios de este archivo. No te olvides que las extensiones son un iframe, por lo que vas a necesitar utilizar [HashRouter](https://reactrouter.com/en/main/router-components/hash-router) en vez de [BrowserRouter](https://reactrouter.com/en/main/router-components/browser-router).
 
 _Hecho con ❤️ por Nacho._
