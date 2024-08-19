@@ -40,6 +40,7 @@ Estos comandos estan hechos para facilitar el proceso del desarrollo en las exte
 
 - **npm run build:zip**: Este comando ejecuta el comando build y zippea los archivos que están dentro de la carpeta dist con todos los archivos necesarios para el deploy. Este archivo dist.zip es el que vas a necesitar para agregar tu extensión a la plataforma.
 - **npm run format**: Este comando utiliza Prettier para formattear todo el código del proyecto. Al ejecutarlo revisa todos los archivos y aplica el formato especificado en la config. Esto ayuda a mantener el código limpio para todos.
+- **npm run lint**: Este comando utiliza ESLint para analizar el código en busca de errores y problemas de estilo. El comando está configurado para revisar todos los archivos con extensiones .ts y .tsx, reportar directivas de desactivación no utilizadas y asegurarse de que no haya advertencias (--max-warnings 0). Esto ayuda a garantizar que el código siga las reglas de calidad y estilo establecidas en el proyecto.
 
 ## Sentry y react-router-dom
 
