@@ -42,8 +42,8 @@ Estos comandos estan hechos para facilitar el proceso del desarrollo en las exte
 - **npm run format**: Este comando utiliza Prettier para formattear todo el código del proyecto. Al ejecutarlo revisa todos los archivos y aplica el formato especificado en la config. Esto ayuda a mantener el código limpio para todos.
 - **npm run lint**: Este comando utiliza ESLint para analizar el código en busca de errores y problemas de estilo. El comando está configurado para revisar todos los archivos con extensiones .ts y .tsx, reportar directivas de desactivación no utilizadas y asegurarse de que no haya advertencias (--max-warnings 0). Esto ayuda a garantizar que el código siga las reglas de calidad y estilo establecidas en el proyecto.
 
-## Sentry y react-router-dom
+## React-router-dom
 
-Actualmente Sentry se inicializa en src\main.tsx. Si tu proyecto ya utiliza / va a utilizar react-router-dom, se necesita habilitar los comentarios de este archivo. No te olvides que las extensiones son un iframe, por lo que vas a necesitar utilizar [HashRouter](https://reactrouter.com/en/main/router-components/hash-router) en vez de [BrowserRouter](https://reactrouter.com/en/main/router-components/browser-router).
+No te olvides que las extensiones son un iframe, por lo que vas a necesitar utilizar [HashRouter](https://reactrouter.com/en/main/router-components/hash-router) en vez de [BrowserRouter](https://reactrouter.com/en/main/router-components/browser-router).
 
 _Hecho con ❤️ por Nacho._
