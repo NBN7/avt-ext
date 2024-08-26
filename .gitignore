@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist.zip
 *.local
 
 # Editor directories and files
@@ -22,7 +23,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-*.npmrc
 
 # Bin directory
-bin
+# bin
