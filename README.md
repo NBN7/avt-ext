@@ -13,20 +13,12 @@ Este comando te hace la vida más fácil, te crea un template para iniciar proye
 
 Ademas, agrega el paquete **SDK Types** para que tengas autocompletado a la hora de interactuar con nuestro SDK. Para utilizarlo vas a tener que crear un archivo .npmrc basado en el archivo ya existente (.npmrc.example) y agregar un token de GitLab válido.
 
-## Uso para desarrolladores externos
+## Uso para desarrolladores
 
 Para crear un nuevo proyecto basado en este template siendo un desarrollador externo a Auravant, usá el siguiente comando papá:
 
 ```bash
 npx avt-ext@latest nombre_del_repo
-```
-
-## Uso para desarrolladores de Auravant
-
-Para crear un nuevo proyecto basado en este template siendo un desarrollador de Auravant, usá el siguiente comando papá:
-
-```bash
-npx avt-ext@latest --gitlab nombre_del_repo
 ```
 
 ## Componentes
