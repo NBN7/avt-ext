@@ -1,5 +1,7 @@
 # Auravant Extensions Template
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README.en-US.md)
+
 ## Descripción
 
 Este comando te hace la vida más fácil, te crea un template para iniciar proyectos de extensiones en Auravant mucho más rápido y eficiente. El template viene con una config inicial con el siguiente stack:
