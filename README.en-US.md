@@ -20,7 +20,7 @@ Additionally, it includes the **SDK Types** package so that you have autocomplet
 To create a new project based on this template as an external developer to Auravant, use the following command:
 
 ```bash
-npx avt-ext@latest nombre_del_repo
+npx avt-ext@latest repo_name
 ```
 
 ## Components
