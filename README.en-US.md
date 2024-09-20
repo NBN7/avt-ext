@@ -47,3 +47,5 @@ These commands are designed to facilitate the development process for Auravant e
 ## React-router-dom
 
 Remember that the extensions are an iframe, so you will need to use [HashRouter](https://reactrouter.com/en/main/router-components/hash-router) instead of [BrowserRouter](https://reactrouter.com/en/main/router-components/browser-router).
+
+_Made with ❤️ by Nacho._
