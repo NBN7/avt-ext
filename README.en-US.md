@@ -13,7 +13,7 @@ This command makes your life easier by creating a template to start extension pr
 - **Prettier**: Code formatter.
 - **ESLint**: Tool for identifying and reporting problems in JavaScript and TypeScript code.
 
-Additionally, it includes the **SDK Types** package so that you have autocomplete when interacting with our SDK. To use it, you will need to create a `.npmrc` file based on the existing file (`.npmrc.example`) and add a valid GitLab token.
+Additionally, it includes the **SDK Types** package so that you have autocomplete when interacting with our SDK.
 
 ## Usage for Developers
 

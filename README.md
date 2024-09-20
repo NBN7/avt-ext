@@ -13,7 +13,7 @@ Este comando te hace la vida más fácil, te crea un template para iniciar proye
 - **Prettier**: Formateador de código.
 - **ESLint**: Herramienta para identificar y reportar problemas en el código JavaScript y TypeScript.
 
-Ademas, agrega el paquete **SDK Types** para que tengas autocompletado a la hora de interactuar con nuestro SDK. Para utilizarlo vas a tener que crear un archivo .npmrc basado en el archivo ya existente (.npmrc.example) y agregar un token de GitLab válido.
+Ademas, agrega el paquete **SDK Types** para que tengas autocompletado a la hora de interactuar con nuestro SDK.
 
 ## Uso para desarrolladores
 
