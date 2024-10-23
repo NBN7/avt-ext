@@ -34,7 +34,8 @@
     },
 
     /* Types */
-    "types": ["@auravant/sdk-types"]
+    // enable this if you are using sdk-types package
+    // "types": ["@auravant/sdk-types"]
   },
   "include": ["src", "scripts", "vite.config.ts"]
 }
