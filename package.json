@@ -1,6 +1,6 @@
 {
   "name": "avt-ext",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "type": "module",
   "bin": "./bin/cli.js",
   "scripts": {
@@ -16,7 +16,6 @@
     "@fontsource-variable/open-sans": "*",
     "@radix-ui/react-slot": "*",
     "archiver": "*",
-    "chalk": "*",
     "class-variance-authority": "*",
     "clsx": "*",
     "lucide-react": "*",
